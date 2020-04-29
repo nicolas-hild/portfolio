@@ -1,29 +1,92 @@
 <div id="home">
-
+    <div class="phrase">
+        <ngx-typed-js [strings]="['JavaScript.', 'CSS.', 'arrow function.']" [shuffle]="false" [typeSpeed]="80" [loop]="true">
+            Laisse moi être ton <span class="typing"></span>
+        </ngx-typed-js>
+    </div>
 </div>
 
-<div id="about">
-    <div class="section-name">
-        <h2>À PROPOS</h2>
-    </div>
+<div id="about" class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-3">
-            <img id="mypic" src="../../assets/71498240_10220637059780514_7437647441177870336_o.jpg" alt="Nicolas Hild Picture">
-            <div class="attributes">
-                <div class="left-side">
-                    <p>Curieux</p>
-                    <p>Curieux</p>
-                    <p>Curieux</p>
+        <div class="col-12">
+            <div class="section-name">
+                <h2>À PROPOS DE MOI</h2>
+            </div>
+        </div>
+        <div class="col-12">
+            <ul class="about-navigation">
+                <div>
+                    <li [class.active-about]="aboutView == 'infos'"><a (click)="aboutView = 'infos'" >Mes informations</a></li>
+                    <li [class.active-about]="aboutView == 'soft'"><a (click)="aboutView = 'soft'" >Mes compétences</a></li>
                 </div>
-                <div class="right-side">
-                    <p>Curieux</p>
-                    <p>Curieux</p>
-                    <p>Curieux</p>
+            </ul>
+        </div>
+        <div class="col-12">
+            <div [ngSwitch]="aboutView">
+
+                <div class="personnal-section" *ngSwitchCase="'infos'">
+                    <div class="attributes">
+                        <img id="mypic" src="../../assets/71498240_10220637059780514_7437647441177870336_o.jpg" alt="Nicolas Hild Picture">  
+                        
+                        <div class="personnal-infos">
+                            <h2>Nicolas Hild</h2>
+                            <p class="work">Développeur web front-end</p>
+                            <p class="quote">"Il faut vivre sa vie comme un match de tennis, <Br> chaque set est important !"</p>
+                        </div>
+                        
+                        <div class="qualities">
+                            <p><i class="fas fa-search"></i> Curieux</p>
+                            <p><i class="fas fa-paint-brush"></i> Créatif</p>
+                            <p><i class="fas fa-heart"></i> Passionné</p>
+                            <p><i class="fas fa-laptop"></i> Investit</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="personnal-section" *ngSwitchCase="'soft'">
+                    <div class="skills">
+                        <div class="skill-sections">
+                            <p class="skill-part">Développement web</p>
+                            <div class="dev">
+                                <p><img class="skill-icon" src="../../assets/skills/html.svg" alt="Logo HTML"> HTML 5</p>
+                                <p><img class="skill-icon" src="../../assets/skills/css.svg" alt="Logo CSS"> CSS 3</p>
+                                <p><img class="skill-icon" src="../../assets/skills/js.svg" alt="Logo JavaScript"> JavaScript</p>
+                                <p><img class="skill-icon" src="../../assets/skills/angular-brands.svg" alt="Logo Angular"> Angular</p>
+                                <p><img class="skill-icon" src="../../assets/skills/bootstrap.svg" alt="Logo Bootstrap"> Bootstrap</p>
+                                <p><img class="skill-icon" src="../../assets/skills/ruby.svg" alt="Logo Ruby"> Ruby / rails</p>
+                                <p><img class="skill-icon" src="../../assets/skills/sql.svg" alt="Logo SQL"> SQL</p>
+                            </div>
+                        </div>
+                        <div class="skill-sections">
+                            <p class="skill-part">Design graphique</p>
+                            <div class="design">
+                                <p><img class="skill-icon" src="../../assets/skills/photoshop.svg" alt="Logo photoshop"> Photoshop</p>
+                                <p><img class="skill-icon" src="../../assets/skills/illustrator.svg" alt="Logo illustrator"> Illustrator</p>
+                                <p><img class="skill-icon" src="../../assets/skills/indesign.svg" alt="Logo InDesign"> InDesign</p>
+                                <p><img class="skill-icon" src="../../assets/skills/figma.svg" alt="Logo Figma"> Figma</p>
+                            </div>
+                        </div>
+                        <div class="skill-sections">
+                            <p class="skill-part">Outils</p>
+                            <div class="tools">
+                                <p><img class="skill-icon" src="../../assets/skills/github-brands.svg" alt="Logo github"> Github</p>
+                                <p><img class="skill-icon" src="../../assets/skills/git-alt-brands.svg" alt="Logo git"> Git</p>
+                            </div>
+                        </div>
+                        <div class="skill-sections">
+                            <p class="skill-part">Environnements</p>
+                            <div class="env">
+                                <p><img class="skill-icon" src="../../assets/skills/apple-brands.svg" alt="Logo Apple"> Mac OS</p>
+                                <p><img class="skill-icon" src="../../assets/skills/windows-brands.svg" alt="Logo Windows"> Windows</p>
+                                <p><img class="skill-icon" src="../../assets/skills/linux-brands.svg" alt="Logo Linux"> Linux</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-
 </div>
 
 <div id="projects">
@@ -33,3 +96,60 @@
 <div id="contact">
 
 </div>
+
+
+
+
+
+
+<!-- <div id="about" class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="section-name">
+                <h2>À PROPOS</h2>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="personnal-section">
+                <img id="mypic" src="../../assets/71498240_10220637059780514_7437647441177870336_o.jpg" alt="Nicolas Hild Picture">
+                
+                <div class="attributes">
+                    <div class="left-side">
+                        <p><i class="fas fa-search"></i> Curieux</p>
+                        <p><i class="fas fa-paint-brush"></i> Créatif</p>
+                    </div>
+                    <div class="right-side">
+                        <p><i class="fas fa-heart"></i> Passionné</p>
+                        <p><i class="fas fa-laptop"></i> Investit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-8">
+            <div class="softwares">
+                <div>
+                    <p>
+                        <i class="fab fa-js-square red-soft"></i>
+                    </p>
+                    <p>
+                        <i class="fab fa-html5"></i>
+                    </p>
+                    <p>
+                        <i class="fab fa-css3-alt red-soft"></i>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <i class="fab fa-angular"></i>
+                    </p>
+                    <p>
+                        <i class="fas fa-gem red-soft"></i>
+                    </p>
+                    <p>
+                        <i class="fab fa-bootstrap"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

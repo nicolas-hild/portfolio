@@ -8,6 +8,14 @@
     background-size: cover;
     text-align: center;
     bottom: 0;
+
+    .phrase {
+        text-align: center;
+        line-height: calc(100vh - 60px);
+        color: white;
+        font-size: 40px;
+    }
+
     div {
         height: 100%;
         bottom: 0;
@@ -23,23 +31,142 @@
 // ABOUT
 
 #about {
-    height: 500px;
     background-color: #FFF3F3;
+    min-height: 400px;
+
+
+    .about-navigation {
+        list-style: none;
+        padding: 0;
+        
+        div {
+            display: flex;
+            justify-content: center;
+        }
+        li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .active-about {
+            color: white;
+            font-weight: 500;
+            background-color: #A70000;
+        }
+    }
+
+    .section-name {
+        padding: 20px 0;
+        text-align: center;
+        color: #A70000;
+    }
+
+    .personnal-section {
+        text-align: center;
+        padding: 15px;
+
+        #mypic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        
+
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 0 auto;
+
+            .skill-icon {
+                width: 30px;
+                height: 30px;
+                object-fit: contain;
+            }
+
+            .skill-sections {
+                padding: 0 20px;
+                width: 25%;
+                .env, .dev, .design, .tools {
+                    font-size: 16px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-top: 10px;
+                    p {
+                        padding: 5px 0;
+                        width: 50%;
+                    }
+                    i {
+                        font-size: 24px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .skill-part{
+                font-weight: 700;
+                color: white;
+                background-color: rgba(167, 0, 0, 0.5);
+                border-radius: 2%;
+                padding: 5px 10px;
+
+            }
+        }
+
+
+
+
+        .attributes {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+
+            .personnal-infos {
+                text-align: center;
+                .work {
+                    font-style: italic;
+                }
+                .quote {
+                    font-weight: 700;
+                    font-style: italic;
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+            }
+
+            .qualities {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                i {
+                    color: #A70000;
+                    font-size: 20px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
 }
 
-.section-name {
-    padding: 20px 0;
-    text-align: center;
-    color: #A70000;
+// ABOUT > SOFTWARES
+
+.softwares {
+    padding: 15px;
+    
+    div {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+
+        i {
+            font-size: 70px;
+            color: #A70000;
+        }
+    }
 }
-
-#mypic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-
-}
-
 
 // PROJETS
 
