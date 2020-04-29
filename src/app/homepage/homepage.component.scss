@@ -1,0 +1,57 @@
+
+// HOME
+
+#home {
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-image: url("../../assets/18707.jpg");
+    background-size: cover;
+    text-align: center;
+    bottom: 0;
+    div {
+        height: 100%;
+        bottom: 0;
+        a {
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// ABOUT
+
+#about {
+    height: 500px;
+    background-color: #FFF3F3;
+}
+
+.section-name {
+    padding: 20px 0;
+    text-align: center;
+    color: #A70000;
+}
+
+#mypic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+
+
+// PROJETS
+
+#projects {
+    height: 450px;
+}
+
+
+// CONTACT
+
+#contact {
+    height: 450px;
+    background-color: #FFF3F3;
+}
+
